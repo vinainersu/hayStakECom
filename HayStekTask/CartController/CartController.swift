@@ -38,8 +38,17 @@ class CartController: UIViewController {
     @IBAction func onTapCheckout() {
         if cartItems.count  > 0 {
             let alert = UIAlertController(title: "Success", message: "Thank You", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in 
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
+                isCheckout = true
                 cartItems.removeAll()
+                if let tabBarController = self.tabBarController as? TabBarController {
+                    if let thirdTabBarItemView = tabBarController.tabBar.items?[3].value(forKey: "view") as? UIControl,
+                       let imageView = thirdTabBarItemView.subviews.compactMap({ $0 as? UIImageView }).first {
+                       
+                            imageView.removeBadge()
+                        
+                    }
+                }
                 self.tableView.reloadData()
             }))
             present(alert, animated: true, completion: nil)
