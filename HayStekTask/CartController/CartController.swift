@@ -40,6 +40,7 @@ class CartController: UIViewController {
             let alert = UIAlertController(title: "Success", message: "Thank You", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in 
                 cartItems.removeAll()
+                self.tableView.reloadData()
             }))
             present(alert, animated: true, completion: nil)
         }
