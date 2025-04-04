@@ -6,12 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3992FF5D2D9FA9E300304E9D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3992FF5C2D9FA9E300304E9D /* SDWebImage */; };
+		3992FF5F2D9FA9E300304E9D /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3992FF5E2D9FA9E300304E9D /* SDWebImageMapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		39FA4B692D9ED5B50008AFE3 /* HayStekTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HayStekTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		39FA4B7B2D9ED5B60008AFE3 /* Exceptions for "HayStekTask" folder in "HayStekTask" target */ = {
+		3992FFC82D9FC0E700304E9D /* Exceptions for "HayStekTask" folder in "HayStekTask" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,10 +26,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		39FA4B6B2D9ED5B50008AFE3 /* HayStekTask */ = {
+		3992FFB42D9FC0E700304E9D /* HayStekTask */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				39FA4B7B2D9ED5B60008AFE3 /* Exceptions for "HayStekTask" folder in "HayStekTask" target */,
+				3992FFC82D9FC0E700304E9D /* Exceptions for "HayStekTask" folder in "HayStekTask" target */,
 			);
 			path = HayStekTask;
 			sourceTree = "<group>";
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3992FF5F2D9FA9E300304E9D /* SDWebImageMapKit in Frameworks */,
+				3992FF5D2D9FA9E300304E9D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +52,7 @@
 		39FA4B602D9ED5B50008AFE3 = {
 			isa = PBXGroup;
 			children = (
-				39FA4B6B2D9ED5B50008AFE3 /* HayStekTask */,
+				3992FFB42D9FC0E700304E9D /* HayStekTask */,
 				39FA4B6A2D9ED5B50008AFE3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,10 +81,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				39FA4B6B2D9ED5B50008AFE3 /* HayStekTask */,
+				3992FFB42D9FC0E700304E9D /* HayStekTask */,
 			);
 			name = HayStekTask;
 			packageProductDependencies = (
+				3992FF5C2D9FA9E300304E9D /* SDWebImage */,
+				3992FF5E2D9FA9E300304E9D /* SDWebImageMapKit */,
 			);
 			productName = HayStekTask;
 			productReference = 39FA4B692D9ED5B50008AFE3 /* HayStekTask.app */;
@@ -107,6 +116,9 @@
 			);
 			mainGroup = 39FA4B602D9ED5B50008AFE3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3992FF5B2D9FA9E300304E9D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 39FA4B6A2D9ED5B50008AFE3 /* Products */;
 			projectDirPath = "";
@@ -159,9 +171,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Flavor.HayStekTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -186,9 +202,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Flavor.HayStekTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -333,6 +353,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3992FF5B2D9FA9E300304E9D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3992FF5C2D9FA9E300304E9D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3992FF5B2D9FA9E300304E9D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		3992FF5E2D9FA9E300304E9D /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3992FF5B2D9FA9E300304E9D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39FA4B612D9ED5B50008AFE3 /* Project object */;
 }
