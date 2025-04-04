@@ -9,6 +9,7 @@ import UIKit
 
 var cartCount: Int? = 0
 var cartItems = [ProductsModel]()
+var isCheckout: Bool = false
 
 class HomeController: UIViewController {
     @IBOutlet weak var catCollectionView:UICollectionView!
@@ -18,7 +19,6 @@ class HomeController: UIViewController {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet var twoSideCornerView: [UIView]!
     
-    var proDataCount = 29
     var productdataArray = [ProductsModel]()
     
     override func viewDidLoad() {
@@ -40,6 +40,16 @@ class HomeController: UIViewController {
             i.clipsToBounds = true
         }
         bgView.layer.cornerRadius = 15
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if isCheckout {
+            isCheckout = false
+            for i in 0..<productdataArray.count {
+                productdataArray[i].isAddedToCart = false
+            }
+            prodCollectionView.reloadData()
+        }
     }
     
     private func setupCollectionView() {
